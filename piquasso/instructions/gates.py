@@ -871,7 +871,7 @@ class Kerr(Gate):
 
     .. math::
         K_i (\xi) = \exp \left (
-            i \xi n_i n_i
+            i \xi \hat{n}^2_i
         \right ).
 
     Since the Kerr gate is non-linear, the ladder operators are not evolved into a
@@ -881,10 +881,10 @@ class Kerr(Gate):
     the Kerr gate transforms the ladder operators as
 
     .. math::
-        K^\dagger_j(\kappa) a_j K_j(\kappa) &=
-            a_j \exp\left(i \kappa \left( 2 \hat{n}_j - I\right)\right),\\
-        K^\dagger_j(\kappa) a_j^\dagger K_j(\kappa) &=
-            a_j^\dagger \exp\left(
+        K^\dagger_j(\kappa) \hat{a}_j K_j(\kappa) &=
+            \hat{a}_j \exp\left(i \kappa \left( 2 \hat{n}_j - I\right)\right),\\
+        K^\dagger_j(\kappa) \hat{a}_j^\dagger K_j(\kappa) &=
+            \hat{a}_j^\dagger \exp\left(
                 -i \kappa \left(2 \hat{n}_j - I \right)
             \right).
 
@@ -941,14 +941,14 @@ class CrossKerr(Gate):
 
     .. math::
         CK_{ij} (\xi) = \exp \left (
-            i \xi n_i n_j
+            i \xi \hat{n}_i \hat{n}_j
         \right ).
 
     The Cross-Kerr gate transforms the annihilation operators as
 
     .. math::
-        CK_{ij}^\dagger (\xi) a_i CK_{ij} (\xi) &= a_i \exp(- i \xi n_j) \\
-        CK_{ij}^\dagger (\xi) a_j CK_{ij} (\xi) &= a_j \exp(- i \xi n_i)
+        CK_{ij}^\dagger (\xi) \hat{a}_i CK_{ij} (\xi) &= \hat{a}_i \exp(- i \xi \hat{n}_j) \\
+        CK_{ij}^\dagger (\xi) \hat{a}_j CK_{ij} (\xi) &= \hat{a}_j \exp(- i \xi \hat{n}_i)
 
 
     Note:
